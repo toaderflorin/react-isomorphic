@@ -24028,7 +24028,6 @@ var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____C
       taskText: ''
     };
 
-    this.addTask = this.addTask.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -24046,10 +24045,6 @@ var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____C
     this.setState({
       taskText: event.target.value
     });
-  }});
-
-  Object.defineProperty(AddTask.prototype,"addTask",{writable:true,configurable:true,value:function() {"use strict";
-    this.props.addTask(this.state.taskText);
   }});
 
 

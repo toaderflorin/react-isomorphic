@@ -6,7 +6,6 @@ class AddTask extends React.Component {
       taskText: ''
     };
 
-    this.addTask = this.addTask.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 

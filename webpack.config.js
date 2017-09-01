@@ -1,5 +1,12 @@
 const path = require('path');
 const AsyncAwaitPlugin = require('webpack-async-await') ;
+var WebpackIsomorphicToolsPlugin = require('webpack-isomorphic-tools/plugin')
+
+var webpackIsomorphicToolsPlugin = new WebpackIsomorphicToolsPlugin(require('./webpack-isomorphic-tools-configuration'))
+ // also enter development mode since it's a development webpack configuration 
+ // (see below for explanation) 
+ .development();
+
 
 module.exports = {
   entry: './src/static/app/index.jsx',
@@ -22,6 +29,7 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   plugins: [
-    new AsyncAwaitPlugin({})
+    new AsyncAwaitPlugin({}),
+    webpackIsomorphicToolsPlugin
   ]
 }

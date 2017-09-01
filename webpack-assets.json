@@ -1,0 +1,10 @@
+{
+  "javascript": {
+    "main": "bundle.js"
+  },
+  "styles": {},
+  "assets": {},
+  "webpack": {
+    "version": "3.5.5"
+  }
+}
