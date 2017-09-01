@@ -3,9 +3,22 @@ body {
   margin: 0;
 }
 
+button {
+  border-radius: 3px;
+  background: #f3f3f3;
+  border: 1px solid #777;
+  padding: 5px 10px; 
+  outline: none;
+}
+
+input {
+  padding: 5px; 
+  outline: none;
+}
+
 .content {
   width: 840px;
-  margin: 5px auto;  
+  margin: 5px auto; 
 }
 
 .top { 

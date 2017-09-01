@@ -1,9 +1,9 @@
 const Task = require('./task');
 
-const TaskList = ({taskList}) => {    
+const TaskList = ({ taskList, deleteTask }) => {
   const els = taskList.map((task) => {
-    return <Task task={task} />;
-  });  
+    return <Task task={task} deleteTask={deleteTask} />;
+  });
 
   return (
     <div>

@@ -6,7 +6,7 @@ class AddTask extends React.Component {
       taskText: ''
     };
 
-    this.addTaskClick = this.addTaskClick.bind(this);
+    this.addTask = this.addTask.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -15,7 +15,7 @@ class AddTask extends React.Component {
       <div className="top">
         <span className="spaced-out">Add a task</span>
         <input className="spaced-out" type="text" value={this.state.taskText} onChange={this.handleChange} />
-        <button className="spaced-out" onClick={this.addTaskClick}>Add</button>
+        <button className="spaced-out" onClick={this.props.addTask.bind(this, this.state.taskText)}>Add</button>
       </div>
     );
   }
@@ -24,10 +24,6 @@ class AddTask extends React.Component {
     this.setState({
       taskText: event.target.value
     });
-  }
-
-  addTaskClick() {
-    this.props.addTaskClick(this.state.taskText);
   }
 }
 
